@@ -7,7 +7,11 @@ Options for the rendering of the scale control.
 
 */
 package google.maps;
+#if haxe3
+import js.html.*;
+#else
 import js.Dom;
+#end
 
 extern class ScaleControlOptions {
 

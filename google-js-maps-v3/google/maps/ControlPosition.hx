@@ -22,7 +22,11 @@ Elements at the left or right sides flow downwards.
 
 */
 package google.maps;
+#if haxe3
+import js.html.*;
+#else
 import js.Dom;
+#end
 
 extern class ControlPosition {
 

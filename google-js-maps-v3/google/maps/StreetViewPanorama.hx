@@ -31,8 +31,11 @@ manually set.  Note that not all position changes trigger a
 pano_changed.
 */
 package google.maps;
+#if haxe3
+import js.html.*;
+#else
 import js.Dom;
-
+#end
 extern class StreetViewPanorama extends MVCObject{
 
 /*
@@ -41,12 +44,20 @@ panorama, add the control's <div> to the
 MVCArray corresponding to the ControlPosition
 where it should be rendered.
 */
+#if haxe3
+public var controls : Array<MVCArray<Element>>;
+#else
 public var controls : Array<MVCArray<HtmlDom>>;
+#end
 
 /*
 Creates a panorama with the passed StreetViewPanoramaOptions.
 */
+#if haxe3
+public function new(container:Element, ?opts:StreetViewPanoramaOptions) : Void;
+#else
 public function new(container:HtmlDom, ?opts:StreetViewPanoramaOptions) : Void;
+#end
 
 /*
 Set the custom panorama provider called on pano change to load custom

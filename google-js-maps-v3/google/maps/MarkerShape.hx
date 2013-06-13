@@ -9,7 +9,11 @@ type of marker and coordinates specific to that type of marker.
 
 */
 package google.maps;
+#if haxe3
+import js.html.*;
+#else
 import js.Dom;
+#end
 
 extern class MarkerShape {
 

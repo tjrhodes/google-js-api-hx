@@ -31,7 +31,11 @@ mousedown : Event - This event is fired when the DOM mousedown event is fired on
 marker icon.
 */
 package google.maps;
+#if haxe3
+import js.html.*;
+#else
 import js.Dom;
+#end
 
 extern class Marker extends MVCObject{
 

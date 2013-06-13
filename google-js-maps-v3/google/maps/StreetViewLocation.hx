@@ -6,7 +6,11 @@ A representation of a location in the Street View panorama.
 
 */
 package google.maps;
+#if haxe3
+import js.html.*;
+#else
 import js.Dom;
+#end
 
 extern class StreetViewLocation {
 

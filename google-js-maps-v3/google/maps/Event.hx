@@ -12,6 +12,7 @@ import js.html.*;
 import js.Dom;
 #end
 
+
 extern class Event {
 	
 private static function __init__() : Void untyped {

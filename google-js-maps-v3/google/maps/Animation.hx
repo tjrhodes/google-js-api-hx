@@ -1,5 +1,9 @@
 package google.maps;
+#if haxe3
+import js.html.*;
+#else
 import js.Dom;
+#end
 
 /*
 Animations that can be played on a marker. Use the setAnimation method on Marker or the animation option to play an animation.

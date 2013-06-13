@@ -8,7 +8,11 @@ or hybrid maps. Immutable.
 
 */
 package google.maps;
+#if haxe3
+import js.html.*;
+#else
 import js.Dom;
+#end
 
 extern class MapType {
 
@@ -57,14 +61,22 @@ public var alt : String;
 Returns a tile for the given tile coordinate (x, y) and zoom level.
 This tile will be appended to the given ownerDocument.
 */
+#if haxe3
+public function getTile(tileCoord:Point, zoom:Float, ownerDocument:Document) : Element;
+#else
 public function getTile(tileCoord:Point, zoom:Float, ownerDocument:Document) : HtmlDom;
+#end
 
 /*
 Releases the given tile, performing any necessary cleanup.
 The provided tile will have already been removed from the document.
 Optional.
 */
+#if haxe3
+public function releaseTile(tile:Element) : Void;
+#else
 public function releaseTile(tile:HtmlDom) : Void;
+#end
 
 
 }

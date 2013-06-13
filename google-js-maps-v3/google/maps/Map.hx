@@ -33,7 +33,11 @@ click : MouseEvent - This event is fired when the user clicks on the map
 maptypeid_changed : Void - This event is fired when the mapTypeId property changes.
 */
 package google.maps;
+#if haxe3
+import js.html.*;
+#else
 import js.Dom;
+#end
 
 extern class Map extends MVCObject{
 
@@ -48,7 +52,11 @@ add the control's <div> to the MVCArray
 corresponding to the ControlPosition where it should be
 rendered.
 */
+#if haxe3
+public var controls : Array<MVCArray<Element>>;
+#else
 public var controls : Array<MVCArray<HtmlDom>>;
+#end
 
 /*
 Additional map types to overlay.
@@ -60,7 +68,11 @@ Creates a new map inside of the given HTML container, which is
 typically a DIV element.
 
 */
+#if haxe3
+public function new(mapDiv:Element, ?opts:MapOptions) : Void;
+#else
 public function new(mapDiv:HtmlDom, ?opts:MapOptions) : Void;
+#end
 
 /*
 
@@ -84,7 +96,11 @@ public function getStreetView() : StreetViewPanorama;
 /*
 
 */
+#if haxe3
+public function getDiv() : Element;
+#else
 public function getDiv() : HtmlDom;
+#end
 
 /*
 Changes the center of the map to the given LatLng.  If the

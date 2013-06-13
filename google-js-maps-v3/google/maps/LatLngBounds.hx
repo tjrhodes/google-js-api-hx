@@ -8,7 +8,11 @@ crosses the 180 degrees longitudinal meridian.
 
 */
 package google.maps;
+#if haxe3
+import js.html.*;
+#else
 import js.Dom;
+#end
 
 extern class LatLngBounds {
 

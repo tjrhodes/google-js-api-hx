@@ -6,9 +6,13 @@ Based on original Google JS API documentation
 
 */
 package google.maps;
+#if haxe3
+import js.html.*;
+#else
 import js.Dom;
+#end
 
-extern class MVCArray<Dynamic> extends MVCObject, implements ArrayAccess<Dynamic>{
+extern class MVCArray<Dynamic> extends MVCObject implements ArrayAccess<Dynamic>{
 
 /*
 A mutable MVC Array.

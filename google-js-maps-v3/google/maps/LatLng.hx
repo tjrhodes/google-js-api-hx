@@ -7,7 +7,11 @@ is a point in geographical coordinates, latitude and longitude.
 
 */
 package google.maps;
+#if haxe3
+import js.html.*;
+#else
 import js.Dom;
+#end
 
 extern class LatLng {
 

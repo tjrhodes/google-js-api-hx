@@ -8,7 +8,7 @@ Options for the rendering of the map type control.
 */
 package google.maps;
 #if haxe3
-import js.Dom;
+import js.html.*;
 #else
 import js.Dom;
 #end

@@ -6,7 +6,11 @@ A collection of references to adjacent Street View panos.
 
 */
 package google.maps;
+#if haxe3
+import js.html.*;
+#else
 import js.Dom;
+#end
 
 extern class StreetViewLink {
 
