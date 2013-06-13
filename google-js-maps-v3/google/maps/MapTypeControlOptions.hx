@@ -7,7 +7,11 @@ Options for the rendering of the map type control.
 
 */
 package google.maps;
+#if haxe3
 import js.Dom;
+#else
+import js.Dom;
+#end
 
 extern class MapTypeControlOptions {
 
