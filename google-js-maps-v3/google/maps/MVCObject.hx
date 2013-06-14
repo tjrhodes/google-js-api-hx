@@ -20,6 +20,12 @@ Base class implementing KVO.
 public function new() : Void;
 
 /*
+ * Adds the given listener function to the given event name.
+ * Returns an identifier for this listener that can be used with google.maps.event.removeListener.
+ * */
+public function addListener(eventName:String, handler:google.maps.Event->Void):MapsEventListener;
+
+/*
 Generic handler for state changes.
 Override this in derived classes to handle arbitrary state changes.
 */

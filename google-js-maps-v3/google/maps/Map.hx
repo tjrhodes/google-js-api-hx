@@ -42,6 +42,44 @@ import js.Dom;
 extern class Map extends MVCObject{
 
 /*
+ * Constants for event types
+ * */
+
+/*idle : Void - This event is fired when the map becomes idle after panning or zooming.*/
+static public inline var IDLE:String = "idle";
+/*drag : Void - This event is repeatedly fired while the user drags the map.*/
+static public inline var DRAG:String = "drag";
+/*zoom_changed : Void - This event is fired when the map zoom property changes.*/
+static public inline var ZOOM_CHANGED:String = "zoom_changed";
+/*tilesloaded : Void - This event is fired when the visible tiles have finished loading.*/
+static public inline var TILES_LOADED:String = "tilesloaded";
+/*resize : Void - Developers should trigger this event on the map when the div changes size: google.maps.event.trigger(map, 'resize').*/
+static public inline var RESIZE:String = "resize";
+/*mousemove : MouseEvent - This event is fired whenever the user's mouse moves over the map container.*/
+static public inline var MOUSEMOVE:String = "mousemove";
+/*rightclick : MouseEvent - This event is fired when the DOM contextmenu event is fired on the map container.*/
+static public inline var RIGHTCLICK:String = "rightclick";
+/*bounds_changed : Void - This event is fired when the viewport bounds have changed.*/
+static public inline var BOUNDS_CHANGED:String = "bounds_changed";
+/*mouseout : MouseEvent - This event is fired when the user's mouse exits the map container.*/
+static public inline var MOUSEOUT:String = "mouseout";
+/*dblclick : MouseEvent - This event is fired when the user double-clicks on the map.*/
+static public inline var DBLCLICK:String = "dblclick";
+/*mouseover : MouseEvent - This event is fired when the user's mouse enters the map container.*/
+static public inline var MOUSEOVER:String = "mouseover";
+/*dragstart : Void - This event is fired when the user starts dragging the map.*/
+static public inline var DRAGSTART:String = "dragstart";
+/*dragend : Void - This event is fired when the user stops dragging the map.*/
+static public inline var DRAGEND:String = "dragend";
+/*projection_changed : Void - This event is fired when the projection has changed.*/
+static public inline var PROJECTION_CHANGED:String = "projection_changed";
+/*click : MouseEvent - This event is fired when the user clicks on the map (but not when they click on a marker or infowindow).*/
+static public inline var CLICK:String = "click";
+/*maptypeid_changed : Void - This event is fired when the mapTypeId property changes.*/
+static public inline var MAPTYPEID_CHANGED:String = "maptypeid_changed";
+
+
+/*
 A registry of MapType instances by string ID.
 */
 public var mapTypes : MapTypeRegistry;
