@@ -6,7 +6,11 @@ Based on original Google JS API documentation
 
 */
 package google.maps;
+#if haxe3
+
+#else
 import js.Dom;
+#end
 
 extern class Point {
 
@@ -28,7 +32,7 @@ public function new(x:Float, y:Float) : Void;
 /*
 Compares two Points
 */
-public function equals(other:Point) : Bool;
+public function equals(other:google.maps.Point) : Bool;
 
 /*
 Returns a string representation of this Point.

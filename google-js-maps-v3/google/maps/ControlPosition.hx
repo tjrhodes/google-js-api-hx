@@ -43,6 +43,16 @@ flow downwards.
 public static var LEFT : Dynamic;
 
 /*
+indicates that the control should be placed along the bottom left of the map, but above any BOTTOM_LEFT elements.
+*/
+public static var LEFT_BOTTOM : Dynamic;
+
+/*
+indicates that the control should be placed along the top left of the map, but below any TOP_LEFT elements.
+*/
+public static var LEFT_TOP : Dynamic;
+
+/*
 Elements are positioned in the center of the bottom row.
 */
 public static var BOTTOM : Dynamic;
@@ -52,6 +62,16 @@ Elements are positioned on the right, below top-right elements, and
 flow downwards.
 */
 public static var RIGHT : Dynamic;
+
+/*
+ indicates that the control should be placed along the bottom right of the map, but above any BOTTOM_RIGHT elements.
+*/
+public static var RIGHT_BOTTOM : Dynamic;
+
+/*
+ indicates that the control should be placed along the top right of the map, but below any TOP_RIGHT elements.
+*/
+public static var RIGHT_TOP : Dynamic;
 
 /*
 Elements are positioned in the top left and flow towards the middle.

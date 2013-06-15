@@ -6,7 +6,6 @@ Based on original Google JS API documentation
 
 */
 package google.maps;
-import js.Dom;
 
 extern class MarkerImage {
 
